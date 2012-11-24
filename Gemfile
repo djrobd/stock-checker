@@ -31,6 +31,12 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
 
+# Devise authentication
+gem 'devise'
+
+# RailsAdmin interface for managing data
+gem 'rails_admin'
+
 # Test environment gems
 group :test, :development do
   gem 'rspec-rails', '~> 2.0'
