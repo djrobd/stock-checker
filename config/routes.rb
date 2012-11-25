@@ -1,12 +1,11 @@
 StockChecker::Application.routes.draw do
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
+  root :to => 'home/welcome#index'
+  namespace :home do
+    # Routes for 'Home' controllers
+  end
 
   devise_for :administrators
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', :as => :administrator_root
 
 end
